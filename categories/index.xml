@@ -1,14 +1,23 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Categories on Loya-Wiki</title>
+    <title>Categories on Jane - A simple theme for Hugo</title>
     <link>https://loyasto.github.io/categories/</link>
-    <description>Recent content in Categories on Loya-Wiki</description>
+    <description>Recent content in Categories on Jane - A simple theme for Hugo</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
+    <lastBuildDate>Thu, 06 Jun 2019 16:01:23 +0800</lastBuildDate>
     
 	<atom:link href="https://loyasto.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>工作</title>
+      <link>https://loyasto.github.io/categories/%E5%B7%A5%E4%BD%9C/</link>
+      <pubDate>Thu, 06 Jun 2019 16:01:23 +0800</pubDate>
+      
+      <guid>https://loyasto.github.io/categories/%E5%B7%A5%E4%BD%9C/</guid>
+      <description></description>
+    </item>
     
   </channel>
 </rss>
