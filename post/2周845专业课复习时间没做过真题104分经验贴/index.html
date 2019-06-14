@@ -501,6 +501,7 @@ if (!doNotTrack) {
     
     
 
+    
     <footer class="post-footer">
       
 
@@ -536,62 +537,52 @@ if (!doNotTrack) {
           </a>
       </nav>
     </footer>
+    
   </article>
 
   
   
 
   
-  
+  <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Artalk DEMO</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body { padding:45px 10px;margin:0;background:#f4f4f4 }
+        .card { margin:0 auto;max-width:700px;position:relative;overflow:hidden;background:#FFF;border-radius:4px;padding:20px }
+        .card:not(:last-child) { margin-bottom:10px }
+        .title > a { display:block;text-decoration:none;color:#0083ff;font-size:35px;margin-top:0;margin-bottom:10px;margin-left:-30px }
+        .title > a:hover { margin-left:0 }
+        .title > a > span { opacity:0 }
+        .title > a:hover>span { opacity:1 }
+        .desc { font-size:12px;color:#757e91 }
+        .social { margin-top:20px }
+        .social > a:not(:last-child) { margin-right:2px }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <link href="/lib/artalk/Artalk.css" rel="stylesheet">
+    <script type="text/javascript" src=/lib/artalk/Artalk.js></script>
+</head>
 
-  
-
-  
-  
-    <div class="post bg-white">
-      <script src="https://utteranc.es/client.js"
-            repo= "xianmin/comments-for-hugo-theme-jane"
-            issue-term="pathname"
-            theme="github-dark-orange"
-            crossorigin="anonymous"
-            async>
-      </script>
-    </div>
-  
-
-  
-
-  
-
-  <div class="disqus-comment">
-  <div class="disqus-button" id="load_disqus" onclick="load_disqus()">
-    Show Disqus Comments
+<body>
+  <div class="card">
+    <div id="comments"></div>
   </div>
-  <div id="disqus_thread"></div>
-  <script type="text/javascript">
-    var disqus_config = function () {
-      this.page.url = "https://loyasto.github.io/post/2%E5%91%A8845%E4%B8%93%E4%B8%9A%E8%AF%BE%E5%A4%8D%E4%B9%A0%E6%97%B6%E9%97%B4%E6%B2%A1%E5%81%9A%E8%BF%87%E7%9C%9F%E9%A2%98104%E5%88%86%E7%BB%8F%E9%AA%8C%E8%B4%B4/";
-    };
-    function load_disqus() {
-      
-      
-      if (window.location.hostname === 'localhost') return;
-
-      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-      var disqus_shortname = 'iotctech';
-      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-
-      $('#load_disqus').remove();
-    };
+  <script>
+    var artalk = new Artalk({
+      el: '#comments',
+      placeholder: '来啊，快活啊 (/ω＼)',
+      defaultAvatar: 'mp',
+      pageSize: 50,
+      pageKey: 'https://wiki.iotctech.com/raiders/getcomment',
+      serverUrl: 'https://wiki.iotctech.com/raiders/getcomment',
+    })
   </script>
-  <noscript>Please enable JavaScript to view the
-    <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a>
-  </noscript>
-  
-  </div>
-
-    
+</body>
+</html>
 
         </div>
       </div>
