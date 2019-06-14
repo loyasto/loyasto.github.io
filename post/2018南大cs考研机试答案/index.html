@@ -676,20 +676,25 @@ void Output(int root){
     .social > a:not(:last-child) { margin-right:2px }
   </style>
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-<link href="dist/Artalk.css?25ea19e3a49f2e26b6dc" rel="stylesheet"><script type="text/javascript" src="dist/Artalk.js?25ea19e3a49f2e26b6dc"></script></head>
+  <link href="/lib/artalk/Artalk.css" rel="stylesheet">
+  <script type="text/javascript" src=/lib/artalk/Artalk.js></script>
+</head>
 <body>
   
   <div class="card">
     <div id="comments"></div>
   </div>
   <script>
+    var token = getQueryString('token')
+    var raiderId = getQueryString('raiderId')
     var artalk = new Artalk({
       el: '#comments',
       placeholder: '来啊，快活啊 (/ω＼)',
       defaultAvatar: 'mp',
       pageSize: 50,
       pageKey: 'https://artalk.js.org/',
-      serverUrl: (location.hostname === 'localhost' || location.hostname === '127.0.0.1') ? 'http://localhost:23366/' : 'https://qwqaq.com/Artalk/index.php'
+      raiderId: raiderId,
+      serverUrl: 'https://wiki.iotctech.com:433/raiders/getcomment',
     })
   </script>
 </body>
