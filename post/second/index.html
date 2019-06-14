@@ -301,27 +301,25 @@ if (!doNotTrack) {
   <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8">
-    <title>Artalk DEMO</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        body { padding:45px 10px;margin:0;background:#f4f4f4 }
-        .card { margin:0 auto;max-width:700px;position:relative;overflow:hidden;background:#FFF;border-radius:4px;padding:20px }
-        .card:not(:last-child) { margin-bottom:10px }
-        .title > a { display:block;text-decoration:none;color:#0083ff;font-size:35px;margin-top:0;margin-bottom:10px;margin-left:-30px }
-        .title > a:hover { margin-left:0 }
-        .title > a > span { opacity:0 }
-        .title > a:hover>span { opacity:1 }
-        .desc { font-size:12px;color:#757e91 }
-        .social { margin-top:20px }
-        .social > a:not(:last-child) { margin-right:2px }
-    </style>
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-    <link href="/lib/artalk/Artalk.css" rel="stylesheet">
-    <script type="text/javascript" src=/lib/artalk/Artalk.js></script>
-</head>
-
+  <meta charset="UTF-8">
+  <title>Artalk DEMO</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body { padding:45px 10px;margin:0;background:#f4f4f4 }
+    .card { margin:0 auto;max-width:700px;position:relative;overflow:hidden;background:#FFF;border-radius:4px;padding:20px }
+    .card:not(:last-child) { margin-bottom:10px }
+    .title > a { display:block;text-decoration:none;color:#0083ff;font-size:35px;margin-top:0;margin-bottom:10px;margin-left:-30px }
+    .title > a:hover { margin-left:0 }
+    .title > a > span { opacity:0 }
+    .title > a:hover>span { opacity:1 }
+    .desc { font-size:12px;color:#757e91 }
+    .social { margin-top:20px }
+    .social > a:not(:last-child) { margin-right:2px }
+  </style>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<link href="dist/Artalk.css?25ea19e3a49f2e26b6dc" rel="stylesheet"><script type="text/javascript" src="dist/Artalk.js?25ea19e3a49f2e26b6dc"></script></head>
 <body>
+  
   <div class="card">
     <div id="comments"></div>
   </div>
@@ -331,13 +329,12 @@ if (!doNotTrack) {
       placeholder: '来啊，快活啊 (/ω＼)',
       defaultAvatar: 'mp',
       pageSize: 50,
-      pageKey: 'https://wiki.iotctech.com/raiders/getcomment',
-      serverUrl: 'https://wiki.iotctech.com/raiders/getcomment',
+      pageKey: 'https://artalk.js.org/',
+      serverUrl: (location.hostname === 'localhost' || location.hostname === '127.0.0.1') ? 'http://localhost:23366/' : 'https://qwqaq.com/Artalk/index.php'
     })
   </script>
 </body>
 </html>
-
         </div>
       </div>
     </main>
